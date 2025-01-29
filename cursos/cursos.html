@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Cursos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1C1C1C;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3EC2E9;
+            color: #1C1C1C;
+            padding: 1rem 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header h1 {
+            font-size: 2 rem;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav a {
+            color: #1C1C1C;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        .logo img {
+            height: 100px;
+            width: 100px;
+        }
+
+        .containerheader {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background-color: #D8E5E9;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .course-card {
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .course-card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .course-info {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .enroll-button {
+            background: #3EC2E9;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline;
+            text-align: center;
+        }
+
+        .enroll-button:hover {
+            background: #2A9CC2;
+        }
+
+        footer {
+            background-color: #3EC2E9;
+            color: #1C1C1C;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="https://globalbizacademy.github.io/gba/homepage/" class="logo">
+                <img src="img/logo.jpeg" alt="Logo">
+            </a>
+            <h1>Global Unity Initiative ONG</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Cursos</a></li>
+                    <li><a href="#">Recursos</a></li>
+                    <li><a href="recursos.html">Comunidad</a></li>
+                    <li><a href="contacto.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="containerheader">
+        <h1 class="title">Cursos Disponibles</h1>
+
+        <!-- Filtros de búsqueda -->
+        <div class="filters">
+            <select id="filter-category">
+                <option value="">Todos</option>
+                <option value="comercio">Comercio Internacional</option>
+                <option value="finanzas">Finanzas</option>
+                <option value="administracion">Administración y Mercadotecnia</option>
+                <option value="gestion">Gestión y Liderazgo</option>
+            </select>
+            <select id="filter-level">
+                <option value="">Todos</option>
+                <option value="principiante">Principiante</option>
+                <option value="intermedio">Intermedio</option>
+                <option value="avanzado">Avanzado</option>
+            </select>
+            <button onclick="filterCourses()">Filtrar</button>
+        </div>
+
+        <!-- Lista de cursos -->
+        <div id="courses-container" class="courses-grid">
+            <!-- Cursos se generarán dinámicamente aquí -->
+        </div>
+    </div>
+
+    <script>
+        const courses = [
+            { category: "comercio", title: "International Business Essentials", description: "Cubre los conceptos esenciales del comercio internacional, la globalización y cómo las empresas se relacionan con economías globales.", duration: "Aproximadamente 4 semanas, 4-6 horas por semana", level: "principiante", image: "https://redshelf-images.s3-external-1.amazonaws.com/cover_image/9780137653355.jpg", link: "https://www.coursera.org/learn/international-business" },
+            { category: "comercio", title: "International Trade", description: "Este curso explora los fundamentos del comercio internacional, incluyendo teoría económica, políticas comerciales y la estructura de los mercados internacionales.", duration: "6 semanas, 3-4 horas por semana", level: "intermedio", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link: "https://www.coursera.org/learn/international-business" },
+            { category: "comercio", title: "Incoterms y contratos internacionales", description: "Aprende los términos clave del comercio internacional.", duration: "6 horas, en línea", level: "avanzado", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"https://www.udemy.com/course/incoterms-el-lenguaje-del-comercio-internacional/?utm_source=adwords&utm_medium=udemyads&utm_campaign=Search_DSA_Beta_Prof_la.ES_cc.MX&campaigntype=Search&portfolio=Mexico&language=ES&product=Course&test=&audience=DSA&topic=&priority=Beta&utm_content=deal4584&utm_term=_._ag_162849008374_._ad_704564284746_._kw__._de_c_._dm__._pl__._ti_dsa-2061826679977_._li_9131547_._pd__._&matchtype=&gad_source=1&gclid=Cj0KCQiAwOe8BhCCARIsAGKeD55jYWvGd5PzdwxDVM2sKZlXWKhUFC9AabIIErPVaAFd-raDtQGIBDsaArxhEALw_wcB&couponCode=ST16MT28125CROW" },
+            { category: "comercio", title: "Global Trade and Digitalization", description: "Explora cómo la digitalización está transformando el comercio internacional, desde las plataformas de comercio electrónico hasta los sistemas de pagos digitales y la logística internacional.", duration: "4 semanas, 3 horas por semana", level: "intermedio", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link: "https://www.coursera.org/learn/international-business" },
+            { category: "comercio", title: "International Economics", description: "proporciona una introducción profunda a la economía internacional, incluyendo temas como el comercio, las políticas comerciales y los flujos de capital internacional.", duration: "6 semanas, 3-4 horas por semana", level: "intermedio", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link: "https://www.coursera.org/learn/international-business" },
+
+            { category: "finanzas", title: "Finanzas internacionales y manejo de divisas", description: "Aprende sobre flujos monetarios globales.", duration: "6 horas, en línea", level: "intermedio", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
+            { category: "finanzas", title: "Diploma in International Finance", description: "Un curso completo que cubre los fundamentos de las finanzas internacionales, incluyendo las políticas monetarias globales, la gestión de riesgos y los mercados internacionales de capitales.", duration: "10-15 horas", level: "intermedio", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
+            { category: "finanzas", title: "c", description: "Aprende sobre flujos monetarios globales.", duration: "6 horas, en línea", level: "intermedio", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
+            { category: "finanzas", title: "Finanzas internacionales y manejo de divisas", description: "Aprende sobre flujos monetarios globales.", duration: "6 horas, en línea", level: "intermedio", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
+            { category: "finanzas", title: "Riesgo cambiario y herramientas de cobertura", description: "Estrategias para minimizar riesgos financieros globales.", duration: "5 horas, en línea", level: "avanzado", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
+            
+            { category: "administracion", title: "Estrategias de marketing internacional", description: "Claves para expandir tu negocio globalmente.", duration: "4 horas, en línea", level: "avanzado", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
+            { category: "administracion", title: "Estrategias de marketing internacional", description: "Claves para expandir tu negocio globalmente.", duration: "4 horas, en línea", level: "avanzado", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
+            { category: "administracion", title: "Estrategias de marketing internacional", description: "Claves para expandir tu negocio globalmente.", duration: "4 horas, en línea", level: "avanzado", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
+            { category: "administracion", title: "Estrategias de marketing internacional", description: "Claves para expandir tu negocio globalmente.", duration: "4 horas, en línea", level: "avanzado", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
+            { category: "administracion", title: "Análisis de mercados emergentes", description: "Evalúa oportunidades en mercados en crecimiento.", duration: "5 horas, en línea", level: "intermedio", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
+            
+            { category: "gestion", title: "Liderazgo en equipos multiculturales", description: "Gestiona equipos en contextos internacionales.", duration: "5 horas, en línea", level: "intermedio", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
+            { category: "gestion", title: "Negociación intercultural", description: "Mejora tus habilidades de negociación global.", duration: "6 horas, en línea", level: "avanzado", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
+            { category: "gestion", title: "Negociación intercultural", description: "Mejora tus habilidades de negociación global.", duration: "6 horas, en línea", level: "avanzado", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
+            { category: "gestion", title: "Negociación intercultural", description: "Mejora tus habilidades de negociación global.", duration: "6 horas, en línea", level: "avanzado", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
+            { category: "gestion", title: "Negociación intercultural", description: "Mejora tus habilidades de negociación global.", duration: "6 horas, en línea", level: "avanzado", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" }
+        ];
+
+        function renderCourses(filteredCourses = courses) {
+            const container = document.getElementById('courses-container');
+            container.innerHTML = "";
+            filteredCourses.forEach(course => {
+                container.innerHTML += `
+                    <div class="course-card">
+                        <img src="${course.image}" alt="Imagen del curso">
+                        <h2>${course.title}</h2>
+                        <p>${course.description}</p>
+                        <p class="course-info">${course.duration}</p>
+                        <p class="course-info">Nivel: ${course.level}</p>
+                        
+                        <a target="_blank" href="${course.link}" class="enroll-button">Inscribirse</a>
+                        
+                    </div>
+                `;
+            });
+        }
+
+        function filterCourses() {
+            const category = document.getElementById('filter-category').value;
+            const level = document.getElementById('filter-level').value;
+            let filtered = courses;
+
+            if (category) filtered = filtered.filter(course => course.category === category);
+            if (level) filtered = filtered.filter(course => course.level === level);
+
+            renderCourses(filtered);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => renderCourses());
+    </script>
+    <footer>
+        <p>&copy; Actualizado Enero 28, 2025 GlobalBiz Academy. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
