@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Comunidad</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #010058;
+        }
+        header {
+            background-color: #3EC2E9;
+            color: #1C1C1C;
+            padding: 1rem 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header nav {
+    background-color: #437F9C; /* Cambia el color a tu preferencia */
+    font-size: medium;
+}
+
+header nav a {
+    color: #ffffff; /* Cambia el color del texto de los enlaces */
+}
+
+
+        header h1 {
+            font-size: 2 rem;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav a {
+            color: #1C1C1C;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        
+        .logo img {
+            height: 100px;
+            width: 100px;
+        }
+        .main-content {
+            padding: 2rem;
+            max-width: 1200px; /* Limita el ancho máximo del contenedor */
+            margin: 0 auto; /* Centra el contenedor */
+        }
+
+        .forum-section {
+            background: #f2f5f7(9, 67, 228);
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .forum-section h2 {
+            color: #21295C;
+            margin-bottom: 1rem;
+        }
+
+        .reviews-section, .qa-section, .testimonials-section {
+            background: #f2f5f7;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .forum-section h2, .testimonials-section h2, .qa-section h2 {
+            color: #21295C;
+            margin-bottom: 1rem;
+        }
+        blockquote {
+            background: #f2f5f7;
+            border-left: 4px solid #21295C;
+            margin: 1rem 0;
+            padding: 0.5rem 1rem;
+            font-style: italic;
+        }
+     
+        .qa-section ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .qa-section li {
+            margin-bottom: 1rem;
+        }
+
+        .qa-section strong {
+            color: #21295C;
+        }
+
+        footer {
+            background-color: #3EC2E9;
+            color: #1C1C1C;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        /* Estilo para hacer las imágenes en forma de círculo */
+        .user-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover; /* Asegura que la imagen mantenga su aspecto en el círculo */
+        }
+
+        /* Estilo para las imágenes de los testimonios con esquinas redondeadas */
+        .testimonial img {
+            width: 15%;
+            height: 15%;
+            border-radius: 15%; /* Esquinas redondeadas */
+            object-fit: cover;
+            /* Asegura que la imagen mantenga su aspecto en el contenedor */
+        }
+    </style>
+
+<header>
+    <div class="container">
+        <a href="https://globalbizacademy.github.io/gba/homepage/" class="logo">
+            <img src="img/globalbiz.jfif" alt="Logo">
+        </a>
+        <h1>Global Unity Initiative ONG</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="http://pwalvaroandrade.ct.ws/act1/">Cursos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="http://pwalvaroandrade.ct.ws/act2/">Recursos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="http://pwalvaroandrade.ct.ws/act3/index1.html">Comunidad</a></li>
+                        <li class="nav-item"><a class="nav-link" href="http://pwalvaroandrade.ct.ws/act5/">Blog</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+    <main class="main-content">
+        <!-- Foro: Comercio Internacional -->
+        <section id="foro-comercio" class="forum-section">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <h2>Foro: Comercio Internacional</h2>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>Discute y comparte ideas sobre comercio global.</strong>
+                            <div class="comments-display">
+                                <h4>Comentarios recientes:</h4>
+                                <div class="comment">
+                                    <p><img src="img/comunidad6.jpg" alt="usuario6" class="user-image"> <strong>Ana:</strong> Muy interesante el tema del comercio internacional.</p>
+                                </div>
+                                <div class="comment">
+                                    <p><img src="img/comunidad1.jpg" alt="usuario1" class="user-image"> <strong>Pedro:</strong> Me gustaría saber más sobre tratados comerciales.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Foro: Finanzas -->
+        <section id="foro-comercio" class="forum-section">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <h2>Foro: Finanzas</h2>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>Comparte estrategias y soluciones financieras.</strong>
+                            <div class="comments-display">
+                                <h4>Comentarios recientes:</h4>
+                                <div class="comment">
+                                    <p><img src="img/comunidad7.jpg" alt="usuario7" class="user-image"> <strong>Laura:</strong> ¿Alguien tiene consejos sobre inversiones iniciales?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Foro: Administración y Mercadotecnia -->
+        <section id="foro-comercio" class="forum-section">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                            <h2>Foro: Administración y Mercadotecnia</h2>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>Comparte y explora estrategias de administración y marketing.</strong>
+                            <div class="comments-display">
+                                <h4>Comentarios recientes:</h4>
+                                <div class="comment">
+                                    <p><img src="img/comunidad3.jpg" alt="usuario3" class="user-image"> <strong>Carlos:</strong> Me interesa conocer técnicas de marketing digital.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Foro: Gestión y Liderazgo -->
+        <section id="foro-comercio" class="forum-section">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                            <h2>Foro: Gestión y Liderazgo</h2>
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>Colabora en temas de liderazgo y habilidades gerenciales.</strong>
+                            <div class="comments-display">
+                                <h4>Comentarios recientes:</h4>
+                                <div class="comment">
+                                    <p><img src="img/comunidad2.jpg" alt="usuario2" class="user-image"> <strong>Ian:</strong> ¿Cómo liderar un equipo remoto?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonios -->
+         
+          <section id="testimonios" class="testimonials-section">
+            <h2>Testimonios de Usuarios</h2>
+            <div class="testimonial">
+                <img src="img/comunidad4.jpg" alt="usuario4" class="user-image">
+                <blockquote>"Gracias a esta plataforma, logré avanzar en mi carrera internacional." - Juan Pérez</blockquote>
+            </div>
+            <div class="testimonial">
+                <img src="img/comunidad5.jpg" alt="usuario5" class="user-image">
+                <blockquote>"La comunidad me ayudó a comprender mejor los mercados financieros." - Ana Gómez</blockquote>
+            </div>
+          </section>
+
+        <!-- Zona de Preguntas y Respuestas -->
+          <section id="preguntas" class="qa-section">
+            <h2>Zona de Preguntas y Respuestas</h2>
+            <ul>
+                <li><strong>Pregunta:</strong> ¿Cómo inicio un plan de marketing internacional?</li>
+                <li><strong>Respuesta:</strong> Investiga mercados meta y adapta tu estrategia a las regulaciones locales.</li>
+            </ul>
+          </section>
+      
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Biblioteca de comunidad. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
