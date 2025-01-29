@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Negocios Internacionales</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #1C1C1C;
+            color: #F2F5F7;
+        }
+        header {
+            background-color: #3EC2E9;
+            color: #1C1C1C;
+            padding: 1rem 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header nav {
+    background-color: #437F9C; /* Cambia el color a tu preferencia */
+    font-size: medium;
+}
+
+header nav a {
+    color: #ffffff; /* Cambia el color del texto de los enlaces */
+}
+
+
+        header h1 {
+            font-size: 2 rem;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav a {
+            color: #1C1C1C;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        
+
+        .logo img {
+            height: 100px;
+            width: 100px;
+        }
+        .list-group-item {
+            background-color: #1b3b6f;
+            color: #F2F5F7;
+            border-color: #065a82;
+        }
+        .btn-primary {
+            background-color: #065a82;
+            border-color: #065a82;
+        }
+        .btn-info {
+            background-color: #65bee2;
+            border-color: #65bee2;
+        }
+        .form-control {
+            background-color: #F2F5F7;
+            color: #1C1C1C;
+            border-color: #065a82;
+        }
+        .category-box {
+            background-color: #437F9C;
+            color: #F2F5F7;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+        .comment-box {
+            background-color: #437F9C;
+            color: #F2F5F7;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .comment-time {
+            font-size: 0.8em;
+            color: #F2F5F7;
+
+        }
+        footer {
+            background-color: #3EC2E9;
+            color: #1C1C1C;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    a {
+        text-decoration: none;
+        color:#F2F5F7 
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="https://globalbizacademy.github.io/gba/homepage/" class="logo">
+                <img src="img/logoacademy.jpeg" alt="Logo">
+            </a>
+            <h1>Global Unity Initiative ONG</h1>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="http://pwalvaroandrade.ct.ws/act1/">Cursos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://globalbizacademy.github.io/gba/recursos/recursos.html">Recursos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="http://pwalvaroandrade.ct.ws/act3/index1.html">Comunidad</a></li>
+                            <li class="nav-item"><a class="nav-link" href="http://pwalvaroandrade.ct.ws/act5/">Blog</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container mt-5">
+        <h1 class="mb-4">Blog de Negocios Internacionales</h1>
+
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Artículos Recientes</h2>
+                <div class="list-group mb-4">
+                    <a target="_blank" href="https://elmercantil.com/2025/01/15/los-mercados-asiaticos-sustentan-el-crecimiento-de-un-negocio-logistico-estancado-en-europa/" class="list-group-item list-group-item-action">Los mercados asiáticos</a>
+                    <a target="_blank" href="https://www.shopeando.mx/el-arte-de-negociar-con-proveedores-internacionales/" class="list-group-item list-group-item-action">El arte de negociar con proveedores Internacionales</a>
+                    <a target="_blank" href="https://www.bbva.com/es/innovacion/vuelta-al-mundo-emprendedora-diez-startups-que-destacan-por-su-proyeccion-internacional/" class="list-group-item list-group-item-action">Startups que destacan por su proyección internacional</a>
+                </div>
+
+                <h3>Comentarios</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="comentario" class="form-label">Deja tu comentario:</label>
+                        <textarea class="form-control" id="comentario" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+                
+                <h3 class="mt-4">Comentarios de otros usuarios</h3>
+                <div class="comment-box">
+                    <strong>María López:</strong> ¡Excelente artículo! Me ayudó a comprender mejor los mercados asiáticos.
+                    <div class="comment-time">1 mes atrás</div>
+                </div>
+                <div class="comment-box">
+                    <strong>Carlos Ramírez:</strong> Muy útil la información sobre negociación con proveedores. Gracias por compartir.
+                    <div class="comment-time">2 semanas atrás</div>
+                </div>
+                <div class="comment-box">
+                    <strong>Ana Torres:</strong> Inspirador el caso de la startup, me motiva a expandir mi negocio.
+                    <div class="comment-time">3 días atrás</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h2>Noticias de hoy</h2>
+                <div class="category-box"><a target="_blank" href="https://www.eleconomista.com.mx/tags/innovacion-29709">Innovación</a></div>
+                <div class="category-box"><a target="_blank" href="https://www.eleconomista.com.mx/buscar/?q=sostenibilidad">Sostenibilidad</a></div>
+                <div class="category-box"><a target="_blank" href="https://www.eleconomista.com.mx/buscar/?q=mercados+emergentes">Mercados emergentes</a></div>
+                <div class="category-box"><a target="_blank" href="https://www.eleconomista.com.mx/buscar/?q=liderazgo+global">Liderazgo Global</a></div>
+
+                <h2 class="mt-4">Comparte en redes sociales</h2>
+                <button class="btn btn-primary mb-2"><a target="_blank" href="https://www.linkedin.com/home">LinkedIn</a></button>
+                <button class="btn btn-info mb-2"><a target="_blank" href="https://x.com/i/flow/login">Twitter</a></button>
+                <button class="btn btn-secondary mb-2"><a target="_blank" href="https://www.threads.net/login?hl=es-la">Threads</a></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <footer>
+        <p>&copy; Actualizado Enero 30, 2025 GlobalBiz Academy. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
