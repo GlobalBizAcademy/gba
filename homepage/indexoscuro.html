@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos de Negocios Internacionales</title>
+    
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1C1C1C;
+            color: #D8E5E9;
+        }
+
+        header {
+            background-color: #3EC2E9;
+            color: #1C1C1C;
+            padding: 1rem 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header h1 {
+            font-size: 2 rem;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav a {
+            color: #1C1C1C;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        .logo img {
+            height: 100px;
+            width: 100px;
+        }
+
+        section {
+            padding: 2.5rem 1rem;
+            text-align: center;
+        }
+
+        section h2, section h3 {
+            color: #3EC2E9;
+        }
+
+        section.bg-dark {
+            background-color: #1C1C1C;
+        }
+
+        p {
+            color: #D8E5E9;
+            margin-bottom: 1.5rem;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a.button {
+            display: inline-block;
+            background-color: #437F9C;
+            color: #D8E5E9;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s;
+        }
+
+        a.button:hover {
+            background-color: #3EC2E9;
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .category {
+            background-color: #3EC2E9;
+            color: #1C1C1C;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .category h4 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .category p {
+            margin-bottom: 1rem;
+        }
+
+        .category a {
+            color: #1C1C1C;
+            font-weight: bold;
+        }
+
+        .category a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #3EC2E9;
+            color: #1C1C1C;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.jpeg" alt="Logo">
+            </a>
+            <h1>Global Unity Initiative ONG</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Cursos</a></li>
+                    <li><a href="cursos.html">Recursos</a></li>
+                    <li><a href="recursos.html">Comunidad</a></li>
+                    <li><a href="contacto.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-dark">
+            <h2>Bienvenidos a GlobalBiz Academy</h2>
+            <p>En nuestra plataforma, creemos en el poder de la educación para transformar vidas. Nacimos con la misión de proporcionar a estudiantes, emprendedores y profesionales las herramientas necesarias para destacar en el ámbito de los negocios internacionales.</p>
+
+            <h2>¿Qué nos hace destacar?</h2>
+            <p>Diseñamos cada curso y recurso pensando en las demandas reales del mercado global, para que nuestros usuarios estén preparados para afrontar los retos de un mundo cada vez más competitivo. Más que una plataforma de aprendizaje, somos una comunidad. Aquí encontrarás apoyo, inspiración y oportunidades para conectar con personas que comparten tus intereses y aspiraciones.</p>
+
+            
+
+            <a href="#categorias" class="button">Explorar Categorías</a>
+
+        </section>
+
+        <section id="categorias" class="bg-dark">
+            <h3>Categorías</h3>
+            <div class="categories">
+                <div class="category">
+                    <img src="img/comercio.jpg" height="200px" width="300px" alt="Curso 1">
+                    <h4>Comercio Internacional</h4>
+                    <p>Cursos sobre exportaciones, importaciones y acuerdos comerciales.</p>
+                    <a href="#">Ver Cursos</a>
+                </div>
+                <div class="category">
+                    <img src="img/finanzas.jpg" height="200px" width="300px" alt="Curso 2">
+                    <h4>Finanzas</h4>
+                    <p>Aprende sobre inversiones, presupuestos y análisis financiero.</p>
+                    <a href="#">Ver Cursos</a>
+                </div>
+                <div class="category">
+                    <img src="img/mercadotecnia.jpg" height="200px" width="300px" alt="Curso 3">
+                    <h4>Administración y Mercadotecnia</h4>
+                    <p>Explora estrategias de marketing y gestión empresarial.</p>
+                    <a href="#">Ver Cursos</a>
+                </div>
+                <div class="category">
+                    <img src="img/lider.jpg" height="200px" width="300px" alt="Curso 4">
+                    <h4>Gestión y Liderazgo</h4>
+                    <p>Desarrolla habilidades para liderar equipos y proyectos.</p>
+                    <a href="#">Ver Cursos</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="carrusel" style="padding: 2.5rem 1rem;">
+            <h3> </h3>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img src="img/foto1.jpg" alt="Curso 1">
+                        <p>Aprende desde cualquier lugar del mundo con recursos diseñados para potenciar tus habilidades en negocios internacionales.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/foto2.jpg" alt="Curso 2">
+                        <p>Conecta con expertos en comercio global y accede a herramientas que transformarán tu perspectiva profesional.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/foto3.jpg" alt="Curso 3">
+                        <p>Descubre técnicas avanzadas de marketing internacional.</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/foto4.jpg" alt="Curso 4">
+                        <p>Desarrolla habilidades de liderazgo global.</p>
+                    </div>
+                </div>
+                <button class="carousel-button prev" onclick="moveCarousel(-1)">&#10094;</button>
+                <button class="carousel-button next" onclick="moveCarousel(1)">&#10095;</button>
+            </div>
+        </section>
+        
+        <style>
+            #carrusel {
+                text-align: center;
+                background-color: #1C1C1C;
+            }
+        
+            .carousel-container {
+                position: relative;
+                max-width: 80%;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+        
+            .carousel {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+            }
+        
+            .carousel-item {
+                min-width: 100%;
+                box-sizing: border-box;
+                padding: 1rem;
+            }
+        
+            .carousel-item img {
+                width: 100%;
+                border-radius: 0.5rem;
+            }
+        
+            .carousel-item p {
+                margin-top: 0.5rem;
+                color: #D8E5E9;
+                font-size: 1rem;
+            }
+        
+            .carousel-button {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+                border: none;
+                padding: 0.5rem 1rem;
+                cursor: pointer;
+                font-size: 1.5rem;
+                z-index: 1;
+            }
+        
+            .carousel-button.prev {
+                left: 0;
+            }
+        
+            .carousel-button.next {
+                right: 0;
+            }
+        
+            .carousel-button:hover {
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+        </style>
+        
+        <script>
+            let currentSlide = 0;
+        
+            function moveCarousel(direction) {
+                const carousel = document.querySelector('.carousel');
+                const totalSlides = document.querySelectorAll('.carousel-item').length;
+        
+                currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+                carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+        </script>
+
+<section id="beneficios">
+    <h3>Por qué elegirnos</h3>
+    <div class="benefit-grid">
+        <div class="benefit">
+            <img src="img/global.jpg" height="400px" width="500px" alt="Comunidad">
+            <h4>Comunidad Global</h4>
+            <p>Aquí puedes recibir ayuda de otros estudiantes, especialistas y maestros sin ningun pago requerido.</p>
+        </div>
+        <div class="benefit">
+            <img src="img/aprende.jpg" height="400px" width="500px" alt="Acceso 24/7">
+            <h4>Acceso 24/7</h4>
+            <p>Aprende a tu ritmo, en cualquier lugar de forma gratuita. ¡Únete Ahora!</p>
+        </div>
+    </div>
+</section>
+
+
+        <section id="about" class="bg-dark">
+            <h3>Acerca de Nosotros</h3>
+
+<p>En GlobalBiz Academy, nos dedicamos a ofrecer una plataforma educativa diseñada para impulsar tu desarrollo profesional en el ámbito de los negocios internacionales. Nuestro equipo de expertos trabaja apasionadamente para crear contenido práctico y actualizado que te ayude a destacar en un mundo globalizado. Creemos en el poder del aprendizaje continuo para transformar vidas y abrir nuevas oportunidades. ¡Explora, aprende y crece con nosotros!</p>
+
+        </section>
+
+        <section id="contact" class="bg-dark">
+            <h3>Contacto</h3>
+            <p>¡Registrate ya! ¡Contáctanos por correo!</p>
+            <a href="mailto:gbaoficialmx@gmail.com" class="button">Enviar un Correo</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Actualizado Enero 28, 2025 GlobalBiz Academy. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
