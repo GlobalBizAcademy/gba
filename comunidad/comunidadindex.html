@@ -15,7 +15,7 @@
             background-color: #000000;
             color: #010058;
         }
-        header {
+          header {
             background-color: #3EC2E9;
             color: #1C1C1C;
             padding: 1rem 0;
@@ -30,14 +30,31 @@
             margin: 0 auto;
         }
 
-        header nav {
-    background-color: #437F9C; /* Cambia el color a tu preferencia */
-    font-size: medium;
-}
+        header .navbar-dark .navbar-nav .nav-link {
+            color: #000000;
+            /* Links de la navegación en blanco */
+        }
 
-header nav a {
-    color: #ffffff; /* Cambia el color del texto de los enlaces */
-}
+        header .navbar-dark .navbar-nav .nav-link:hover {
+            color: aqua;
+            /* Color azul al pasar el mouse */
+        }
+
+        header .navbar-dark .navbar-text {
+            color: #000000;
+            /* Texto adicional como "Global Unity Initiative ONG" */
+        }
+
+        header nav {
+            background-color: #3EC2E9;
+            /* Cambia el color a tu preferencia */
+            font-size: medium;
+        }
+
+        header nav a {
+            color: #ffffff;
+            /* Cambia el color del texto de los enlaces */
+        }
 
 
         header h1 {
@@ -57,10 +74,6 @@ header nav a {
             color: #1C1C1C;
             text-decoration: none;
             font-weight: bold;
-        }
-
-        header nav a:hover {
-            text-decoration: underline;
         }
         
         .logo img {
