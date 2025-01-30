@@ -8,6 +8,45 @@
 
 
     <style>
+         header .navbar-text {
+    color: #000000 !important;
+}
+header {
+    background-color: #928f8f; /* Fondo negro para la barra de navegación */
+    color: #ffffff; /* Texto blanco para visibilidad */
+}
+
+header .navbar-dark .navbar-nav .nav-link {
+    color: #000000; /* Links de la navegación en blanco */
+}
+
+header .navbar-dark .navbar-nav .nav-link:hover {
+    color: aqua; /* Color azul al pasar el mouse */
+}
+
+header .navbar-dark .navbar-text {
+    color: #000000; /* Texto adicional como "Global Unity Initiative ONG" */
+}
+h2 {
+    color: aqua; /* Cambia el color de los títulos h2 a aqua */
+}
+h3 { color: aqua !important;}
+        
+        body {
+            background-color: #1C1C1C;
+            color: #D8E5E9;
+            font-size: 1.3rem;
+        }
+        .text-primary{color: aqua !important;}
+
+        header {
+            background-color: #3EC2E9;
+            color: #000000 !important;
+        }
+
+        header .navbar-brand img {
+            height: 100px;
+        }
         body {
             font-family: 'Inter', sans-serif;
             margin: 0;
@@ -30,7 +69,7 @@
             color: #1C1C1C;
         }
         header nav {
-    background-color: #232929; /* Cambia el color a tu preferencia */
+    
     font-size: medium;
 }
 
@@ -166,29 +205,25 @@ header nav a {
 </head>
 <body>
     <header>
-        <div class="container">
-            <a href="https://globalbizacademy.github.io/gba/homepage/" class="logo">
-                <img src="img/logo.jpeg" alt="Logo">
-            </a>
-            <h1>Global Unity Initiative ONG</h1>
-            <nav class="navbar navbar-expand-lg navbar-dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#"></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item"><a class="nav-link" href="https://globalbizacademy.github.io/gba/cursos/cursos.html">Cursos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="https://globalbizacademy.github.io/gba/recursos/recursos.html">Recursos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="https://globalbizacademy.github.io/gba/comunidad/comunidadindex.html">Comunidad</a></li>
-                            <li class="nav-item"><a class="nav-link" href="https://globalbizacademy.github.io/gba/blog/blog.html">Blog</a></li>
-                            
-                        </ul>
-                    </div>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="https://globalbizacademy.github.io/gba/homepage/">
+                    <img src="img/logo.jpeg" alt="Logo">
+                </a>
+                <h1 class="navbar-text">Global Unity Initiative ONG</h1>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="https://globalbizacademy.github.io/gba/cursos/cursos.html">Cursos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://globalbizacademy.github.io/gba/recursos/recursos.html">Recursos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://globalbizacademy.github.io/gba/comunidad/comunidadindex.html">Comunidad</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://globalbizacademy.github.io/gba/blog/blog.html">Blog</a></li>
+                    </ul>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
 
     <main>
