@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos de Negocios Internacionales</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+        }
+
+        header {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 1rem 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+
+
+        section {
+            padding: 2.5rem 1rem;
+        }
+
+        section.bg-white {
+            background-color: white;
+        }
+
+        h2,
+        h3 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        h3 {
+            font-size: 1.75rem;
+        }
+
+        p {
+            color: #4b5563;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a.button {
+            display: inline-block;
+            background-color: #2563eb;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            transition: background-color 0.3s;
+        }
+
+        a.button:hover {
+            background-color: #1d4ed8;
+        }
+
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            margin-top: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+            text-align: center;
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+        }
+
+        .carousel-item h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .carousel-item p {
+            color: #4b5563;
+            margin-bottom: 1rem;
+        }
+
+        .carousel-item a {
+            color: #2563eb;
+        }
+
+        .carousel-item a:hover {
+            text-decoration: underline;
+        }
+
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 1.5rem;
+        }
+
+        .carousel-button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Cursos de Negocios Internacionales</h1>
+
+        </div>
+
+    </header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="bg-white">
+            <h2>Encuentra el curso ideal para ti</h2>
+            <p>Explora una amplia variedad de cursos organizados por categorías para mejorar tus habilidades en negocios
+                internacionales.</p>
+            <a href="#categorias" class="button">Explorar Categorías</a>
+        </section>
+        <section id="categorias">
+            <h3>Categorías</h3>
+            <div class="carousel">
+                <div class="carousel-track">
+                    <div class="carousel-item">
+                        <h4>Comercio Internacional</h4>
+                        <p>Cursos sobre exportaciones, importaciones y acuerdos comerciales.</p>
+                        <a href="#">Ver Cursos</a>
+                    </div>
+                    <div class="carousel-item">
+                        <h4>Finanzas</h4>
+                        <p>Aprende sobre inversiones, presupuestos y análisis financiero.</p>
+                        <a href="#">Ver Cursos</a>
+                    </div>
+                    <div class="carousel-item">
+                        <h4>Administración y Mercadotecnia</h4>
+                        <p>Explora estrategias de marketing y gestión empresarial.</p>
+                        <a href="#">Ver Cursos</a>
+                    </div>
+                    <div class="carousel-item">
+                        <h4>Gestión y Liderazgo</h4>
+                        <p>Desarrolla habilidades para liderar equipos y proyectos.</p>
+                        <a href="#">Ver Cursos</a>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-button" id="prev">&#8249;</button>
+                    <button class="carousel-button" id="next">&#8250;</button>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="bg-white">
+            <h3>Acerca de Nosotros</h3>
+            <p>Somos una plataforma dedicada a recopilar los mejores cursos en línea sobre negocios internacionales,
+                ayudándote a alcanzar tus metas profesionales.</p>
+        </section>
+
+        <section id="contact">
+            <h3>Contacto</h3>
+            <p>¿Tienes preguntas? ¡Contáctanos!</p>
+            <a href="mailto:info@cursosnegocios.com" class="button">Enviar un Correo</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cursos de Negocios Internacionales. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const items = document.querySelectorAll('.carousel-item');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+
+        let currentIndex = 0;
+
+        function updateCarousel() {
+            const width = items[0].getBoundingClientRect().width;
+            track.style.transform = `translateX(-${currentIndex * width}px)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+            updateCarousel();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+            updateCarousel();
+        });
+
+        window.addEventListener('resize', updateCarousel);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>
