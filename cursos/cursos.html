@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Cursos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -29,6 +30,18 @@
             margin: 0 auto;
         }
 
+        header nav {
+            background-color: #437F9C;
+            /* Cambia el color a tu preferencia */
+            font-size: medium;
+        }
+
+        header nav a {
+            color: #ffffff;
+            /* Cambia el color del texto de los enlaces */
+        }
+
+
         header h1 {
             font-size: 2 rem;
             font-weight: bold;
@@ -52,6 +65,7 @@
             text-decoration: underline;
         }
 
+
         .logo img {
             height: 100px;
             width: 100px;
@@ -61,7 +75,7 @@
             width: 80%;
             margin: auto;
             padding: 20px;
-            background-color: #D8E5E9;
+            background-color: #2C2C2C;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
         }
@@ -69,6 +83,7 @@
         .title {
             text-align: center;
             margin-bottom: 20px;
+            color: #ffffff;
         }
 
         .filters {
@@ -85,7 +100,7 @@
         }
 
         .course-card {
-            background: #fff;
+            background: #D8E5E9;
             padding: 15px;
             border-radius: 5px;
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
@@ -106,7 +121,7 @@
         }
 
         .enroll-button {
-            background: #3EC2E9;
+            background: #2A9CC2;
             color: white;
             border: none;
             padding: 10px;
@@ -120,7 +135,7 @@
         }
 
         .enroll-button:hover {
-            background: #2A9CC2;
+            background: #3EC2E9;
         }
 
         footer {
@@ -139,13 +154,22 @@
                 <img src="img/logo.jpeg" alt="Logo">
             </a>
             <h1>Global Unity Initiative ONG</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Cursos</a></li>
-                    <li><a href="#">Recursos</a></li>
-                    <li><a href="recursos.html">Comunidad</a></li>
-                    <li><a href="contacto.html">Blog</a></li>
-                </ul>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="https://globalbizacademy.github.io/gba/cursos/cursos.html">Cursos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://globalbizacademy.github.io/gba/recursos/recursos.html">Recursos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://globalbizacademy.github.io/gba/comunidad/comunidadindex.html">Comunidad</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://globalbizacademy.github.io/gba/blog/blog.html">Blog</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
@@ -178,29 +202,29 @@
 
     <script>
         const courses = [
-            { category: "comercio", title: "International Business Essentials", description: "Cubre los conceptos esenciales del comercio internacional, la globalización y cómo las empresas se relacionan con economías globales.", duration: "Aproximadamente 4 semanas, 4-6 horas por semana", level: "principiante", image: "https://redshelf-images.s3-external-1.amazonaws.com/cover_image/9780137653355.jpg", link: "https://www.coursera.org/learn/international-business" },
-            { category: "comercio", title: "International Trade", description: "Este curso explora los fundamentos del comercio internacional, incluyendo teoría económica, políticas comerciales y la estructura de los mercados internacionales.", duration: "6 semanas, 3-4 horas por semana", level: "intermedio", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link: "https://www.coursera.org/learn/international-business" },
-            { category: "comercio", title: "Incoterms y contratos internacionales", description: "Aprende los términos clave del comercio internacional.", duration: "6 horas, en línea", level: "avanzado", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"https://www.udemy.com/course/incoterms-el-lenguaje-del-comercio-internacional/?utm_source=adwords&utm_medium=udemyads&utm_campaign=Search_DSA_Beta_Prof_la.ES_cc.MX&campaigntype=Search&portfolio=Mexico&language=ES&product=Course&test=&audience=DSA&topic=&priority=Beta&utm_content=deal4584&utm_term=_._ag_162849008374_._ad_704564284746_._kw__._de_c_._dm__._pl__._ti_dsa-2061826679977_._li_9131547_._pd__._&matchtype=&gad_source=1&gclid=Cj0KCQiAwOe8BhCCARIsAGKeD55jYWvGd5PzdwxDVM2sKZlXWKhUFC9AabIIErPVaAFd-raDtQGIBDsaArxhEALw_wcB&couponCode=ST16MT28125CROW" },
-            { category: "comercio", title: "Global Trade and Digitalization", description: "Explora cómo la digitalización está transformando el comercio internacional, desde las plataformas de comercio electrónico hasta los sistemas de pagos digitales y la logística internacional.", duration: "4 semanas, 3 horas por semana", level: "intermedio", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link: "https://www.coursera.org/learn/international-business" },
-            { category: "comercio", title: "International Economics", description: "proporciona una introducción profunda a la economía internacional, incluyendo temas como el comercio, las políticas comerciales y los flujos de capital internacional.", duration: "6 semanas, 3-4 horas por semana", level: "intermedio", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link: "https://www.coursera.org/learn/international-business" },
+            { category: "comercio", title: "International Business Essentials", description: "Cubre los conceptos esenciales del comercio internacional, la globalización y cómo las empresas se relacionan con economías globales.", duration: "4 semanas, 4-6 horas por semana", level: "principiante", image: "https://redshelf-images.s3-external-1.amazonaws.com/cover_image/9780137653355.jpg", link: "https://www.coursera.org/learn/international-business" },
+            { category: "comercio", title: "Comercio Internacional", description: "Aprende a desarrollar y gestionar estrategias de importación y exportación, analizar mercados internacionales y comprender regulaciones aduaneras.", duration: "3 semanas, 1-2 horas por semana", level: "intermedio", image: "https://www.nasapack.com/wp-content/uploads/2022/03/ventajas-del-comercio-internacional.jpg.webp", link: "https://edutin.com/curso-de-comercio-internacional" },
+            { category: "comercio", title: "Logística, Transporte Internacional y Gestión Aduanera", description: "Este curso en línea aborda la logística y el transporte internacional, así como la gestión aduanera, proporcionando conocimientos para ascender profesionalmente en el sector.", duration: "No especificada", level: "avanzado", image: "https://abriendomercados.com/wp-content/uploads/2023/08/logistica-en-transporte-internacional-1.jpg", link: "https://www.uoc.edu/es/estudios/formacion-continua/curso-profesionalizador-logistica-transporte-internacional-gestion-aduanera" },
+            { category: "comercio", title: "Logística y Negocios Internacionales", description: "Aprende a gestionar cadenas de suministro, optimizar procesos de transporte y almacenamiento, y comprender el comercio global en este diplomado en línea.", duration: "No especificada", level: "intermedio", image: "https://thelogisticsworld.com/wp-content/uploads/2024/11/concepto-de-comercio-internacional.webp", link: "https://uvm.mx/oferta-academica/diplomados-certificaciones/logistica-y-negocios-internacionales-en-linea" },
+            { category: "comercio", title: "Economía Internacional", description: "Proporciona una comprensión profunda de los principios y prácticas de la economía internacional, incluyendo el análisis de políticas comerciales y financieras globales.", duration: "6 meses", level: "intermedio", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link: "https://escueladeempresa.com/cursos-universitarios-6-meses/economia-y-financiera/curso-en-economia-internacional/" },
 
-            { category: "finanzas", title: "Finanzas internacionales y manejo de divisas", description: "Aprende sobre flujos monetarios globales.", duration: "6 horas, en línea", level: "intermedio", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
-            { category: "finanzas", title: "Diploma in International Finance", description: "Un curso completo que cubre los fundamentos de las finanzas internacionales, incluyendo las políticas monetarias globales, la gestión de riesgos y los mercados internacionales de capitales.", duration: "10-15 horas", level: "intermedio", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
-            { category: "finanzas", title: "c", description: "Aprende sobre flujos monetarios globales.", duration: "6 horas, en línea", level: "intermedio", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
-            { category: "finanzas", title: "Finanzas internacionales y manejo de divisas", description: "Aprende sobre flujos monetarios globales.", duration: "6 horas, en línea", level: "intermedio", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
-            { category: "finanzas", title: "Riesgo cambiario y herramientas de cobertura", description: "Estrategias para minimizar riesgos financieros globales.", duration: "5 horas, en línea", level: "avanzado", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
-            
-            { category: "administracion", title: "Estrategias de marketing internacional", description: "Claves para expandir tu negocio globalmente.", duration: "4 horas, en línea", level: "avanzado", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
-            { category: "administracion", title: "Estrategias de marketing internacional", description: "Claves para expandir tu negocio globalmente.", duration: "4 horas, en línea", level: "avanzado", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
-            { category: "administracion", title: "Estrategias de marketing internacional", description: "Claves para expandir tu negocio globalmente.", duration: "4 horas, en línea", level: "avanzado", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
-            { category: "administracion", title: "Estrategias de marketing internacional", description: "Claves para expandir tu negocio globalmente.", duration: "4 horas, en línea", level: "avanzado", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
-            { category: "administracion", title: "Análisis de mercados emergentes", description: "Evalúa oportunidades en mercados en crecimiento.", duration: "5 horas, en línea", level: "intermedio", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
-            
-            { category: "gestion", title: "Liderazgo en equipos multiculturales", description: "Gestiona equipos en contextos internacionales.", duration: "5 horas, en línea", level: "intermedio", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
-            { category: "gestion", title: "Negociación intercultural", description: "Mejora tus habilidades de negociación global.", duration: "6 horas, en línea", level: "avanzado", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
-            { category: "gestion", title: "Negociación intercultural", description: "Mejora tus habilidades de negociación global.", duration: "6 horas, en línea", level: "avanzado", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
-            { category: "gestion", title: "Negociación intercultural", description: "Mejora tus habilidades de negociación global.", duration: "6 horas, en línea", level: "avanzado", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" },
-            { category: "gestion", title: "Negociación intercultural", description: "Mejora tus habilidades de negociación global.", duration: "6 horas, en línea", level: "avanzado", image: "https://www.cesuma.mx/blog/wp-content/uploads/2023/05/b2ap3_large_Qu-son-las-divisas.jpeg", link:"" }
+            { category: "finanzas", title: "Economía Circular y Negocios Sostenibles", description: "Desarrollarás habilidades de resolución de problemas para integrar conceptos de circularidad en aplicaciones operativas y financieras.", duration: "8 semanas", level: "principiante", image: "https://www.portalambiental.com.mx/sites/default/files/media/image/2022/07/ofec_economia_circular_empresa_0.jpeg", link: "https://online.professional.uchicago.edu/es/curso/economia-circular-y-los-negocios-sostenibles/" },
+            { category: "finanzas", title: "Psicología de las Finanzas", description: "Te ayudará a entender mucho mejor la irracionalidad y las motivaciones del ser humano en el proceso de toma de decisiones.", duration: "8 semanas", level: "avanzado", image: "https://elasesorfinanciero.com/wp-content/uploads/2024/04/psicologia.jpg", link: "https://online.professional.uchicago.edu/es/curso/la-psicologia-de-las-finanzas/" },
+            { category: "finanzas", title: "Finanzas Internacionales", description: "Te permite analizar el comportamiento de los sistemas financieros y monetarios, así como las inversiones extranjeras directas entre naciones, abarcando temas como banca, divisas, comercio y mercados internacionales.", duration: "5 semanas", level: "intermedio", image: "https://marketdata.com.py/wp-content/uploads/2023/09/La-importancia-de-las-finanzas-internacionales-para-sostener-el-modelo-economico-mundial1-885x452.jpg", link: "https://edutin.com/curso-de-finanzas-internacionales" },
+            { category: "finanzas", title: "Diplomado en Finanzas Internacionales", description: "Desarrolla conocimientos sobre finanzas y vías de financiación a nivel internacional, incluyendo análisis contable, bolsas de valores y evaluación de rentabilidad y riesgo de inversiones en entornos globales.", duration: "No especificada", level: "avanzado", image: "https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", link: "https://www.euroinnova.com/diplomado-finanzas-internacionales-udavinci-mx" },
+            { category: "finanzas", title: "Estrategia Financiera Corporativa", description: "Te enseñará a evaluar los niveles de riesgo y rentabilidad de las inversiones en el ámbito corporativo, así como a realizar una buena distribución y asignación de tus recursos.", duration: "8 semanas", level: "intermedio", image: "https://esieduc.org/wp-content/uploads/2024/03/AdobeStock_675066090-scaled.jpeg", link: "https://online.professional.uchicago.edu/es/curso/estrategia-financiera-corporativa/" },
+
+            { category: "administracion", title: "Marketing Internacional", description: "Este curso te prepara para trabajar en entornos internacionales y multiculturales, abordando la globalización y el desarrollo del marketing digital.", duration: "6 meses", level: "avanzado", image: "https://cdn.shopify.com/s/files/1/0515/9508/3946/files/Untitled_design_19_1024x1024.png?v=1706264775", link: "https://universidadeuropea.com/curso-international-marketing-online/" },
+            { category: "administracion", title: "Administración Básica", description: "Aprende cómo funciona una empresa, toma decisiones informadas, administra personal y gestiona recursos y clientes, adaptándote proactivamente al cambio.", duration: "4 semanas, 1-2 horas por semana", level: "principiante", image: "https://isil.pe/blog/wp-content/uploads/2024/02/personas-analizando-revisando-graficos-financieros-oficina-_1_-scaled.webp", link: "https://edutin.com/curso-de-administracion" },
+            { category: "administracion", title: "Innovación y creatividad organizacional", description: "Te ensenara a utilizar la innovación y la mentalidad empresarial y las metodologías para convertir las oportunidades en especificaciones de productos a nuevos mercados.", duration: "4 semanas, 5-8 horas por semana", level: "intermedio", image: "https://lh3.googleusercontent.com/proxy/iYNNpI7YoP9fGR_nHVzog81Ntf9p3uIwo-U4p8-iSLAuE-33FmgPMZa91d398KvxpyR9mJlo2ADH9Hf3cMUPLaMDDIN6aDiellrGnSwAooXaeR3T665C0BKFnS-0DdM", link: "https://www.edx.org/learn/innovation/tecnologico-de-monterrey-innovacion-y-creatividad-organizacional" },
+            { category: "administracion", title: "El Marketing en el Comercio Internacional", description: "Aprende los conceptos básicos del marketing internacional y las diferentes políticas aplicadas en el comercio global.", duration: "No especificada", level: "principiante", image: "https://www.beedigital.es/wp-content/uploads/2021/10/comercio-internacional.jpg", link: "https://www.euroinnova.com/curso-marketing-internacional" },
+            { category: "administracion", title: "Estrategias y estilos de negociación", description: "Aprende los diferentes estilos y estrategias de negociación en función de los resultados esperados y su impacto en la relación entre las partes involucradas.", duration: "4 semanas, 5-8 horas por semana", level: "intermedio", image: "https://en.camaradesevilla.com/wp-content/uploads/sites/2/2023/06/tecnicas-de-negociacion-5.jpg", link: "https://www.edx.org/learn/negotiations/tecnologico-de-monterrey-estrategias-y-estilos-de-negociacion" },
+
+            { category: "gestion", title: "Liderazgo y Gestión de Equipos", description: "Este curso capacita a los estudiantes en fundamentos del liderazgo, coaching, toma de decisiones y gestión efectiva de equipos de trabajo.", duration: "80 horas", level: "principiante", image: "https://amamex.org.mx/wp-content/uploads/2338-cover.jpg.webp", link: "https://www.academyformacion.com/curso-de-liderazgo-y-gestion-de-equipos/" },
+            { category: "gestion", title: "Habilidades Directivas y Gestión del Cambio", description: "Aprenderás a identificar las competencias clave del liderazgo y cómo gestionar equipos mediante coaching y mentoring, mejorando la productividad y alineando los objetivos organizacionales.", duration: "180 horas", level: "intermedio", image: "https://media.licdn.com/dms/image/v2/D4E12AQESGp0OXhGhNg/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1731023884813?e=2147483647&v=beta&t=XNBPOmB12rKTIsBDSVuSrpg-6W2coo_V_UdVBAQUsmE", link: "https://www.universidadunipro.com/curso-en-habilidades-directivas-y-gestion-del-cambio-C0102.html" },
+            { category: "gestion", title: "Alta Dirección de Negocios", description: "Este diplomado ofrece herramientas para integrar características e innovaciones de los modelos de negocio en la era digital, permitiendo crear estrategias efectivas para la alta dirección.", duration: "6 meses", level: "avanzado", image: "https://uvm.mx/storage/app/uploads/public/395/32f/395/thumb__0_0_0_0_crop.jpg", link: "https://uvm.mx/oferta-academica/diplomados-certificaciones/habilidades-gerenciales-y-directivas-en-linea-diplomados-y-certificaciones/diplomado-alta-direccion-en-negocios-en-linea" },
+            { category: "gestion", title: " Gestión de Proyectos", description: "Este programa en línea ofrece las habilidades necesarias para un trabajo de nivel básico en administración de proyectos, sin requerir experiencia previa.", duration: "No especificada", level: "principiante", image: "https://itcformacionyconsultoria.com/wp-content/uploads/2023/04/gestion-de-proyectos-e1681731412655.jpg", link: "https://grow.google/intl/es-419_us/certificates/project-management/#?modal_active=none" },
+            { category: "gestion", title: "Gestión de Proyectos Internacionales", description: "Este diplomado en línea ofrece formación en la gestión de proyectos internacionales, incluyendo el desarrollo de planes de gestión, gestión de comunicaciones y documentación.", duration: "No especificada", level: "avanzado", image: "https://hernandezsanchez.es/nweb/wp-content/uploads/2019/02/gestion-proyectos-internacionales.jpg", link: "https://www.euroinnova.com/diplomado-gestion-de-proyectos-internacionales-structuralia" }
         ];
 
         function renderCourses(filteredCourses = courses) {
